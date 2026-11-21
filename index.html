@@ -8,7 +8,7 @@
 <meta name="author" content="Joel Duncan">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://o0joelbduncan0o.github.io/">
-<meta name="theme-color" content="#f6f1e8">
+<meta name="theme-color" content="#f0aa9b">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Joel Duncan, poet">
 <meta property="og:title" content="Joel Duncan, poet">
@@ -27,6 +27,9 @@
 <meta name="twitter:image" content="https://o0joelbduncan0o.github.io/images/og-joel-duncan.jpg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,78 +57,185 @@
 }
 </script>
 <style>
-:root{--ground:#f6f1e8;--card:#fffdf8;--ink:#2a1f19;--muted:#6f6158;--rule:#e2d8ca;--accent:#8a4b32;
---serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Noto Serif",serif;
---sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-@media (prefers-color-scheme:dark){:root{--ground:#1c1714;--card:#262019;--ink:#f1e9de;--muted:#b6a898;--rule:#3a3129;--accent:#e0a283}}
+/* The page follows one day: dawn in the hero, daylight in About, dusk into night below. */
+:root{
+  --ink:#2a1646;
+  --ink-soft:#4b3a6b;
+  --day:#f2f6fb;
+  --gold:#f2c14e;
+  --moon:#f3eefb;
+  --moon-soft:#cbc3e3;
+  --focus:var(--ink);
+  --display:"Besley",Georgia,"Times New Roman",serif;
+  --text:"Karla",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --cloud-h:clamp(56px,8.5vw,132px);
+  --gutter:clamp(20px,5vw,48px);
+}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.65 var(--sans)}
-a{color:var(--accent);text-underline-offset:3px}
-.wrap{max-width:640px;margin:0 auto;padding:0 22px}
-nav.top{display:flex;gap:18px;justify-content:center;padding:16px 0 0;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
-nav.top a{color:var(--muted);text-decoration:none}
-nav.top a:hover{color:var(--accent)}
-header.hero{text-align:center;padding:36px 0 30px}
-.portrait{width:240px;height:auto;aspect-ratio:auto;border-radius:18px;display:block;margin:0 auto 22px;border:4px solid var(--card);box-shadow:0 6px 24px rgba(60,40,25,.18)}
-h1{font-family:var(--serif);font-weight:600;font-size:46px;line-height:1.1;margin:0 0 8px;letter-spacing:-.01em}
-.tag{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);margin:0}
-.place{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:10px 0 0}
-section{padding:34px 0;border-top:1px solid var(--rule)}
-h2{font-family:var(--serif);font-weight:600;font-size:28px;margin:0 0 16px}
-h3{font-family:var(--serif);font-weight:600;font-size:22px;margin:0 0 4px;line-height:1.25}
-p{margin:0 0 14px}
-.book{display:flex;gap:20px;align-items:flex-start;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:18px;margin-bottom:16px}
-.book img{width:112px;height:auto;border-radius:3px;box-shadow:0 4px 14px rgba(40,25,15,.25);flex:none}
-.book .meta{font-size:15px;color:var(--muted);margin:0 0 12px}
-.btn{display:inline-block;background:var(--ink);color:var(--ground);text-decoration:none;padding:9px 16px;border-radius:999px;font-size:15px}
-.btn:hover{opacity:.88}
-.soon{background:transparent;border-style:dashed}
-.soon h3{margin-bottom:6px}
-.soon p{margin:0;color:var(--muted)}
-ul.press{list-style:none;padding:0;margin:0}
-ul.press li{padding:12px 0;border-bottom:1px solid var(--rule)}
-ul.press li:last-child{border-bottom:0}
-ul.press a{font-family:var(--serif);font-size:19px;text-decoration:none;color:var(--ink)}
-ul.press a:hover{color:var(--accent)}
-ul.press small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
-.social{display:flex;flex-wrap:wrap;gap:12px}
-.social a{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:10px 18px;text-decoration:none;color:var(--ink);font-size:16px}
-.social svg{width:20px;height:20px;fill:currentColor}
-footer{border-top:1px solid var(--rule);padding:24px 0 40px;text-align:center;color:var(--muted);font-size:14px}
-@media (max-width:420px){h1{font-size:38px}.portrait{width:210px}.book{flex-direction:column;align-items:center;text-align:center}.book img{width:140px}}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--day);color:var(--ink);font:400 1.125rem/1.7 var(--text);-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit;text-underline-offset:4px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+:target{scroll-margin-top:24px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--gutter)}
+.skip{position:absolute;left:var(--gutter);top:-100px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:10}
+.skip:focus{top:12px}
+
+h1,h2,h3{font-family:var(--display);margin:0;color:inherit}
+h2{font-weight:700;font-size:clamp(2rem,4.4vw,2.6rem);line-height:1.1;letter-spacing:-.01em}
+h3{font-weight:700;line-height:1.15}
+p{margin:0 0 1em}
+
+/* ---------- Buttons and links ---------- */
+.btn{display:inline-block;background:var(--ink);color:#fff6e8;text-decoration:none;font-weight:700;font-size:1.05rem;line-height:1;padding:16px 26px;border-radius:999px;transition:transform .2s,background-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn--gold{background:var(--gold);color:var(--ink)}
+
+/* ---------- Dawn: hero ---------- */
+.hero{position:relative;overflow:hidden;color:var(--ink);
+  background:linear-gradient(180deg,#f0aa9b 0%,#f6c7b3 34%,#f4dacb 62%,#d8e3f0 100%);
+  padding-bottom:calc(var(--cloud-h) + 28px)}
+.nav{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:4px 28px;justify-content:flex-start;padding:22px 0 0}
+.hero-text{position:relative;z-index:2}
+.nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:1.02rem;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-bottom-color:currentColor}
+.hero-grid{display:grid;gap:56px;align-items:center;padding-top:clamp(28px,5vw,56px)}
+.hero h1{font-weight:800;font-size:clamp(3.4rem,17vw,5.6rem);line-height:.92;letter-spacing:-.025em;margin:0 0 20px}
+.hero h1 span{display:block}
+.tag{font:italic 500 clamp(1.5rem,3vw,2rem)/1.2 var(--display);margin:0 0 4px}
+.place{font-weight:700;color:var(--ink-soft);margin:0 0 20px}
+.credit{font-size:1.25rem;line-height:1.5;max-width:28ch;margin:0 0 30px}
+
+.arch{position:relative;margin:0;width:min(72vw,340px);aspect-ratio:5/6;justify-self:start}
+.arch img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:999px 999px 22px 22px;box-shadow:0 22px 50px rgba(74,35,60,.28)}
+.arch::after{content:"";position:absolute;inset:-14px;border:2px solid var(--ink);opacity:.3;border-radius:999px 999px 34px 34px;pointer-events:none}
+.sun{position:absolute;z-index:0;left:50%;top:-40%;width:190%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(closest-side,#fff7d9 0%,#fde2ac 48%,rgba(253,226,172,0) 76%);pointer-events:none}
+
+.cloud{position:absolute;left:0;width:100%;height:var(--cloud-h);display:block;pointer-events:none}
+.cloud--hero{bottom:-1px}
+.cloud--hero .front{fill:var(--day)}
+.cloud--hero .back{fill:rgba(255,255,255,.55)}
+
+@media (min-width:780px){
+  .nav{justify-content:flex-end}
+  .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(40px,6vw,72px)}
+  .hero h1{font-size:clamp(4.8rem,9.4vw,7.6rem)}
+  .arch{justify-self:end}
+}
+@media (prefers-reduced-motion:no-preference){
+  .sun{animation:rise 2.8s cubic-bezier(.22,.7,.2,1) both}
+  .cloud--hero .back{animation:drift 3s cubic-bezier(.22,.7,.2,1) both}
+}
+@keyframes rise{from{opacity:0;transform:translate(-50%,28%)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes drift{from{transform:translateX(-56px)}to{transform:none}}
+
+/* ---------- Day: about ---------- */
+.about{position:relative;z-index:2;background:var(--day);padding:clamp(40px,6vw,76px) 0 clamp(40px,6vw,72px)}
+.about-grid{display:grid;gap:22px 64px}
+@media (min-width:780px){.about-grid{grid-template-columns:minmax(0,.8fr) minmax(0,2fr)}}
+.about-copy p{color:#3a2f58;max-width:60ch}
+.about-copy .lead{font:500 clamp(1.45rem,2.6vw,1.75rem)/1.4 var(--display);color:var(--ink);margin-bottom:1.1em}
+.cloud--about{top:calc(100% - 1px);transform:scaleY(-1)}
+.cloud--about .front{fill:var(--day)}
+.cloud--about .back{fill:rgba(226,232,246,.38)}
+
+/* ---------- Dusk into night: books, press, find me ---------- */
+.dusk{position:relative;z-index:1;--focus:var(--gold);color:var(--moon);
+  background:linear-gradient(180deg,#4b2e7f 0%,#2e1e58 46%,#171532 100%);
+  padding:calc(var(--cloud-h) + clamp(40px,6vw,72px)) 0 clamp(72px,10vw,120px)}
+.dusk h2{margin-bottom:clamp(28px,4vw,44px)}
+
+.feature{display:grid;gap:44px;align-items:center}
+.cover{position:relative;display:block;width:min(68vw,280px);transition:transform .3s}
+.cover:hover{transform:translateY(-4px)}
+.cover::before{content:"";position:absolute;inset:-18% -24%;background:radial-gradient(closest-side,rgba(246,170,150,.42),rgba(246,170,150,0));pointer-events:none}
+.cover img{position:relative;display:block;width:100%;height:auto;border-radius:3px;box-shadow:0 28px 60px rgba(6,3,20,.6)}
+.feature h3{font-size:clamp(2rem,4.4vw,2.9rem);letter-spacing:-.01em;margin-bottom:14px}
+.facts{list-style:none;margin:0 0 28px;padding:0;color:var(--moon-soft);font-size:1.08rem;line-height:1.75}
+@media (min-width:760px){.feature{grid-template-columns:auto 1fr;gap:72px}}
+
+.upcoming{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin-top:clamp(56px,8vw,96px)}
+.cover-ghost{width:104px;aspect-ratio:329/500;border:2px dashed rgba(243,238,251,.42);border-radius:3px}
+.upcoming h3{font-size:clamp(1.5rem,3vw,1.85rem);margin-bottom:4px}
+.upcoming p{margin:0;color:var(--moon-soft)}
+
+.press{margin-top:clamp(88px,12vw,148px)}
+.press-list{list-style:none;margin:0;padding:0;border-bottom:1px solid rgba(243,238,251,.18)}
+.press-list li{display:grid;grid-template-columns:clamp(4.4rem,13vw,6.2rem) 1fr;gap:0 clamp(12px,3vw,28px);padding:26px 0;border-top:1px solid rgba(243,238,251,.18)}
+.year{font:700 clamp(1.7rem,4vw,2.4rem)/1.1 var(--display);color:var(--gold);font-variant-numeric:lining-nums tabular-nums}
+.press-list a{display:inline;font:500 clamp(1.2rem,2.4vw,1.45rem)/1.3 var(--display);color:var(--moon);text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .25s}
+.press-list a:hover{background-size:100% 2px}
+.press-list small{display:block;margin-top:8px;color:var(--moon-soft);font-size:1rem}
+
+.find{margin-top:clamp(88px,12vw,148px)}
+.social{display:flex;flex-wrap:wrap;gap:14px}
+.social a{display:inline-flex;align-items:center;gap:12px;color:var(--moon);text-decoration:none;font-weight:700;font-size:1.05rem;padding:14px 24px;border:1.5px solid rgba(243,238,251,.45);border-radius:999px;transition:background-color .2s,color .2s,border-color .2s}
+.social a:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.social svg{width:22px;height:22px;fill:currentColor}
+
+footer{--focus:var(--gold);background:#171532;color:var(--moon-soft);padding:0 0 56px;font-size:1rem}
+footer p{margin:0}
 </style>
 </head>
 <body>
-<div class="wrap">
-<nav class="top" aria-label="Sections"><a href="#about">About</a><a href="#books">Books</a><a href="#press">Press</a><a href="#find">Find me</a></nav>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="hero">
-<img class="portrait" src="images/joel-duncan-poet.jpg" srcset="images/joel-duncan-poet-360.jpg 360w, images/joel-duncan-poet.jpg 720w" sizes="240px" width="240" height="241" alt="Joel Duncan, smiling, in a suit">
-<h1>Joel Duncan</h1>
+<div class="wrap">
+<nav class="nav" aria-label="Sections"><a href="#about">About</a><a href="#books">Books</a><a href="#press">Press</a><a href="#find">Find me</a></nav>
+
+<div class="hero-grid">
+<div class="hero-text">
+<h1><span>Joel</span><span>Duncan</span></h1>
 <p class="tag">Poet</p>
 <p class="place">Greetland, Halifax, West Yorkshire</p>
+<p class="credit">Calderdale&rsquo;s first Young Poet Laureate, and author of <i>My Last Everything</i>.</p>
+<a class="btn" href="#books">See the book</a>
+</div>
+<figure class="arch">
+<div class="sun" aria-hidden="true"></div>
+<img src="images/joel-duncan-poet.jpg" srcset="images/joel-duncan-poet-360.jpg 360w, images/joel-duncan-poet.jpg 720w" sizes="(min-width:840px) 340px, 72vw" width="720" height="722" alt="Joel Duncan, smiling, in a suit">
+</figure>
+</div>
+</div>
+<svg class="cloud cloud--hero" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="back" d="M-90,140 L-90,130 A108.9,78.1 0 0 1 127.9,130 A144.3,96.2 0 0 1 416.5,130 A113.1,82.7 0 0 1 642.7,130 A88.8,61.4 0 0 1 820.4,130 A122.2,102.7 0 0 1 1064.8,130 A82.1,47.7 0 0 1 1229.0,130 A81.8,69.5 0 0 1 1392.6,130 A68.7,30.4 0 0 1 1530.0,130 L1530,140 Z"/><path class="front" d="M-90,140 L-90,136 A69.2,32.1 0 0 1 48.3,136 A78.8,38.3 0 0 1 205.9,136 A59.0,35.0 0 0 1 323.8,136 A110.1,84.1 0 0 1 544.0,136 A100.9,52.0 0 0 1 745.8,136 A87.2,47.0 0 0 1 920.2,136 A65.4,30.4 0 0 1 1050.9,136 A67.9,55.6 0 0 1 1186.7,136 A104.7,80.3 0 0 1 1396.1,136 A66.9,33.7 0 0 1 1530.0,136 L1530,140 Z"/></svg>
 </header>
 
-<section id="about">
-<h2>About</h2>
-<p>Joel Duncan is a poet from Greetland, near Halifax in West Yorkshire.</p>
-<p>In 2014 he was named Calderdale's first Young Poet Laureate. In the role he worked alongside the borough's Poet Laureate, Gez Walsh, visiting schools and libraries to encourage others to read and write poetry.</p>
-<p>His first collection, <i>My Last Everything</i>, was published by The King's England Press in 2015. After the Boxing Day floods of 2015, he and Gez Walsh co-edited <i>Floods of Tears and Laughter</i>, a book of children's poems and writing sold to raise money for the Calderdale Flood Relief Appeal.</p>
+<main id="main">
+<section class="about" id="about" aria-labelledby="about-h">
+<div class="wrap about-grid">
+<h2 id="about-h">About</h2>
+<div class="about-copy">
+<p class="lead">Joel Duncan is a poet from Greetland, near Halifax in West Yorkshire.</p>
+<p>In 2014 he was named Calderdale&rsquo;s first Young Poet Laureate. In the role he worked alongside the borough&rsquo;s Poet Laureate, Gez Walsh, visiting schools and libraries to encourage others to read and write poetry.</p>
+<p>His first collection, <i>My Last Everything</i>, was published by The King&rsquo;s England Press in 2015. After the Boxing Day floods of 2015, he and Gez Walsh co-edited <i>Floods of Tears and Laughter</i>, a book of children&rsquo;s poems and writing sold to raise money for the Calderdale Flood Relief Appeal.</p>
 <p>He has talked about his poetry on radio and in the local press. His second collection, <i>Beauty Is a Timid Beast</i>, is in the works.</p>
+</div>
+</div>
+<svg class="cloud cloud--about" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="back" d="M-90,140 L-90,130 A123.6,97.9 0 0 1 157.3,130 A146.8,76.9 0 0 1 450.8,130 A79.9,68.5 0 0 1 610.6,130 A100.0,61.7 0 0 1 810.6,130 A136.1,70.4 0 0 1 1082.8,130 A143.2,97.4 0 0 1 1369.3,130 A80.4,72.8 0 0 1 1530.0,130 L1530,140 Z"/><path class="front" d="M-90,140 L-90,136 A82.8,48.1 0 0 1 75.6,136 A63.3,50.2 0 0 1 202.2,136 A55.4,35.2 0 0 1 313.0,136 A108.9,49.5 0 0 1 530.8,136 A88.3,60.5 0 0 1 707.3,136 A57.5,33.5 0 0 1 822.2,136 A97.2,59.7 0 0 1 1016.6,136 A98.5,48.0 0 0 1 1213.6,136 A69.3,32.4 0 0 1 1352.2,136 A85.4,69.8 0 0 1 1522.9,136 L1530,140 Z"/></svg>
 </section>
 
-<section id="books">
-<h2>Books</h2>
-<div class="book">
-<a href="https://www.amazon.co.uk/My-Last-Everything-Joel-Duncan/dp/1909548537"><img src="images/my-last-everything-cover.jpg" width="329" height="500" alt="Cover of My Last Everything by Joel Duncan"></a>
+<div class="dusk">
+<section class="books wrap" id="books" aria-labelledby="books-h">
+<h2 id="books-h">Books</h2>
+<div class="feature">
+<a class="cover" href="https://www.amazon.co.uk/My-Last-Everything-Joel-Duncan/dp/1909548537"><img src="images/my-last-everything-cover.jpg" width="329" height="500" alt="Cover of My Last Everything by Joel Duncan"></a>
 <div>
 <h3>My Last Everything</h3>
-<p class="meta">Poems. The King's England Press, October 2015. Paperback, 72 pages. ISBN 9781909548534</p>
-<a class="btn" href="https://www.amazon.co.uk/My-Last-Everything-Joel-Duncan/dp/1909548537">View on Amazon UK</a>
+<ul class="facts">
+<li>Poems</li>
+<li>The King&rsquo;s England Press, October 2015</li>
+<li>Paperback, 72 pages</li>
+<li>ISBN 9781909548534</li>
+</ul>
+<a class="btn btn--gold" href="https://www.amazon.co.uk/My-Last-Everything-Joel-Duncan/dp/1909548537">View on Amazon UK</a>
 </div>
 </div>
-<div class="book soon">
+<div class="upcoming">
+<div class="cover-ghost" aria-hidden="true"></div>
 <div>
 <h3>Beauty Is a Timid Beast</h3>
 <p>Second collection, in the works.</p>
@@ -133,23 +243,27 @@ footer{border-top:1px solid var(--rule);padding:24px 0 40px;text-align:center;co
 </div>
 </section>
 
-<section id="press">
-<h2>In the press</h2>
-<ul class="press">
-<li><a href="https://www.examinerlive.co.uk/news/west-yorkshire-news/first-ever-young-poet-laureate-7932769">First ever young poet laureate of Calderdale is announced to celebrate National Poetry Day</a><small>Huddersfield Examiner, 15 October 2014</small></li>
-<li><a href="https://news.calderdale.gov.uk/poetry-in-motion-at-new-library-site/">Poetry in motion at new library site</a><small>Calderdale Council News, 3 February 2015</small></li>
-<li><a href="https://www.examinerlive.co.uk/news/west-yorkshire-news/poets-gez-walsh-joel-duncan-10835631">Poets Gez Walsh and Joel Duncan to aid flood victims in Calderdale</a><small>Huddersfield Examiner, 5 February 2016</small></li>
+<section class="press wrap" id="press" aria-labelledby="press-h">
+<h2 id="press-h">In the press</h2>
+<ul class="press-list">
+<li><span class="year">2014</span><div><a href="https://www.examinerlive.co.uk/news/west-yorkshire-news/first-ever-young-poet-laureate-7932769">First ever young poet laureate of Calderdale is announced to celebrate National Poetry Day</a><small>Huddersfield Examiner, 15 October 2014</small></div></li>
+<li><span class="year">2015</span><div><a href="https://news.calderdale.gov.uk/poetry-in-motion-at-new-library-site/">Poetry in motion at new library site</a><small>Calderdale Council News, 3 February 2015</small></div></li>
+<li><span class="year">2016</span><div><a href="https://www.examinerlive.co.uk/news/west-yorkshire-news/poets-gez-walsh-joel-duncan-10835631">Poets Gez Walsh and Joel Duncan to aid flood victims in Calderdale</a><small>Huddersfield Examiner, 5 February 2016</small></div></li>
 </ul>
 </section>
 
-<section id="find">
-<h2>Find me</h2>
+<section class="find wrap" id="find" aria-labelledby="find-h">
+<h2 id="find-h">Find me</h2>
 <div class="social">
 <a href="https://www.facebook.com/joelduncanwriter" rel="me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22h3.4z"/></svg>Facebook</a>
 <a href="https://www.instagram.com/joelduncanpoet/" rel="me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2c-2.7 0-3.1 0-4.1.1C4.2 2.3 2.3 4.2 2.1 7.9 2 8.9 2 9.3 2 12s0 3.1.1 4.1c.2 3.7 2.1 5.6 5.8 5.8 1 .1 1.4.1 4.1.1s3.1 0 4.1-.1c3.7-.2 5.6-2.1 5.8-5.8.1-1 .1-1.4.1-4.1s0-3.1-.1-4.1c-.2-3.7-2.1-5.6-5.8-5.8C15.1 2 14.7 2 12 2zm0 1.8c2.7 0 3 0 4 .1 2.7.1 3.9 1.4 4.1 4.1.1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.7-1.4 3.9-4.1 4.1-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.7-.1-3.9-1.4-4.1-4.1-.1-1-.1-1.3-.1-4s0-3 .1-4c.1-2.7 1.4-3.9 4.1-4.1 1-.1 1.3-.1 4-.1z"/></svg>@joelduncanpoet</a>
 </div>
 </section>
 </div>
-<footer>&copy; 2026 Joel Duncan</footer>
+</main>
+
+<footer>
+<div class="wrap"><p>&copy; 2026 Joel Duncan</p></div>
+</footer>
 </body>
 </html>
