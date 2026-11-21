@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://o0joelbduncan0o.github.io/sitemap.xml
